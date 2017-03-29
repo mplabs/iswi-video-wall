@@ -2,6 +2,7 @@
   "name": "npm-preact-boilerplate",
   "version": "0.0.1",
   "description": "",
+  "repository": "git@github.com:mplabs/npm-preact-boilerplate.git",
   "main": "index.js",
   "scripts": {
     "prebuild": "rm -rf dist/* && mkdir -p dist",
