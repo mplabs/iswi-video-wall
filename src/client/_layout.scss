@@ -132,11 +132,6 @@
 
 .invisible {
   visibility: hidden !important;
-  transition: opacity 250ms ease-in-out;
-
-  .animated {
-    opacity: 0;
-  }
 }
 
 .relative {

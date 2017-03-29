@@ -4,6 +4,10 @@ import { applyMiddleware, compose, createStore } from 'redux'
 import appReducer from './reducers'
 import App from './components/App'
 
+const initialState = {
+  // Your apps initial state
+}
+
 const store = createStore(appReducer, initialState,
   (window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose)(applyMiddleware(
     // Midlewares...
