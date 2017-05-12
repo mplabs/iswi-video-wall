@@ -20,13 +20,14 @@
     "api": "npm run api:prod",
     "api:prod": "ENV=production node dist/server/index.js",
     "api:dev": "ENV=development babel-node -w 'src/server' src/server/index.js",
-    "web": "npm run web:prod",
-    "web:prod": "ENV=production PORT=1337 node dist/server/index.js",
-    "web:dev": "ENV=development PORT=1338 node dist/server/index.js",
+    "web": "ENV=production PORT=1338 nodemon dist/server/index.js",
     "browsersync": "browser-sync start --proxy 'localhost:1338' --files 'dist/client' --port 1337 --no-open",
-    "start:prod": "npm run build && npm run web",
-    "start:dev": "npm run build && npm-run-all --parallel watch browsersync web:dev",
-    "start": "npm run start:prod"
+    "browsersync:prod": "browser-sync start --proxy 'localhost:1338' --port 1337 --no-open",
+    "browsersync:reload": "browser-sync reload --port 1337",
+    "start:prod": "npm run build && npm-run-all --parallel web browsersync:prod",
+    "start:dev": "npm run build && npm-run-all --parallel watch browsersync web",
+    "start": "npm run start:prod",
+    "restart": "npm run build && npm run browsersync:reload"
   },
   "engines": {
     "node": "6.10.0"
