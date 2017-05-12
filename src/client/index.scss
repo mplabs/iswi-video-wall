@@ -11,8 +11,8 @@
 }
 
 html {
-  // transform: rotate3d(0,0,1,-90deg) translate3d(-768px,0,0);
-  // transform-origin: 0 0;
+  transform: rotate3d(0,0,1,-90deg) translate3d(-768px,0,0);
+  transform-origin: 0 0;
 
   border: 0; margin: 0; padding: 0;
 }
