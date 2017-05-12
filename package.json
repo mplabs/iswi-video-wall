@@ -5,7 +5,7 @@
   "repository": "git@github.com:mplabs/npm-preact-boilerplate.git",
   "main": "index.js",
   "scripts": {
-    "prebuild": "rm -rf dist/* && mkdir -p dist/{client,server}",
+    "prebuild": "rm -rf dist/* && mkdir -p dist/client && mkdir -p dist/server",
     "build": "npm-run-all --parallel build:*",
     "build:css": "node-sass --include-path node_modules/foundation-sites/scss src/client/index.scss | postcss -c .postcssrc.json | cssmin > dist/client/bundle.min.css",
     "build:html": "cp src/client/index.html dist/client/index.html",
