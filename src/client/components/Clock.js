@@ -19,7 +19,7 @@ export default class Clock extends Component {
 
   render({ currentTime }) {
     return (
-      <div class="clock row">
+      <div class="clock widget row">
         <div class="large-8 columns large-centered text-center">
           <h1>{this.getTime(currentTime)}</h1>
           <h2>{this.getDate(currentTime)}</h2>

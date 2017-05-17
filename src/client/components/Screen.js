@@ -1,6 +1,7 @@
 import { h, Component } from 'preact'
 
 import Clock from './Clock'
+import Twitter from './Twitter'
 import Weather from './Weather'
 
 export default class Screen extends Component {
@@ -15,10 +16,10 @@ export default class Screen extends Component {
           <Weather />
         }
         {(idx === '3') && 
-          <Clock />
+          <Twitter />
         }
         {(idx === '4') && 
-          <Clock />
+          <div className="blank row"></div>
         }
       </div>
     )

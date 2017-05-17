@@ -21,7 +21,7 @@ export default class Weather extends Component {
 
   render({ current, forecast }) {
     return (
-      <div class="weather row">
+      <div class="weather widget row">
         <img
           width="125" height="125"
           src={this.getWeatherIcon(get(current, 'weather[0].icon'))}
