@@ -5,7 +5,7 @@ export class TwitterSource {
   }
 
   getTweets() {
-    return fetch('http://localhost:1337/api/twitter')
+    return fetch('http://10.10.10.1:1337/api/twitter')
       .then(response => response.json())
   }
 

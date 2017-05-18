@@ -36,7 +36,7 @@ rp(options).then(response => JSON.parse(response)).then(response => {
 const router = Router()
 
 router.get('/', (req, res) => {
-  twitter.get('search/tweets', { q: encodeURIComponent('iswi2017 iswi'), count: 25 })
+  twitter && twitter.get('search/tweets', { q: encodeURIComponent('iswi2017 iswi'), count: 25 })
     .then(result => res.send(result.statuses))
     .catch(error => {
       console.error(error)
