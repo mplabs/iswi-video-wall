@@ -10,7 +10,13 @@ import TwitterMedia from './TwitterMedia'
 export default class Twitter extends Component {
 
   componentDidMount() {
-    store.dispatch(actions.fetchTweets())
+    store.dispatch(
+      actions.registerInterval(
+        actions.fetchTweets(),
+        (15 * 60 * 1000), // 15 min
+        true // Execute immediatly
+      )
+    )
   }
 
   render({ tweets }) {
